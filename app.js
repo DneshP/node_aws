@@ -1,9 +1,8 @@
 import express from "express";
 import routes from "./routes/index.js";
-import path from "path";
-import { fileURLToPath, pathToFileURL } from "url";
-const __filename = pathToFileURL(import.meta.url);
-const __dirname = fileURLToPath(__filename);
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 app.set('views', path.join(__dirname, './views'));
