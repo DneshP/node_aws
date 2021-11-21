@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, './assets')));
 app.set('view engine', 'ejs');
 routes(app);
 
-const port = process.env.PORT || 8083;
+const port = process.env.PORT || 8080;
 
 app.listen(port);
 console.log(`Yo server is up @ ${port}`);
